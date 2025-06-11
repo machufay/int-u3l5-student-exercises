@@ -14,3 +14,20 @@ button.addEventListener("click", function() {
     header.style.color = "white";
     img.style.border = "5px solid white";
 });
+    
+let xpos = 0;
+let vel = 1;
+let accel = 0.1;
+console.log(xpos);
+console.log(vel);
+console.log(accel);
+const block = document.querySelector(".block");
+
+    function animate(){
+     vel += accel;
+      xpos += vel;
+      block.style.left = xpos + 'px';
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
