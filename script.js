@@ -24,6 +24,7 @@ console.log(accel);
 const block = document.querySelector(".block");
 
     function animate(){
+
      vel += accel;
       xpos += vel;
       block.style.left = xpos + 'px';
